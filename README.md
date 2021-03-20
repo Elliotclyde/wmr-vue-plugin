@@ -1,7 +1,7 @@
 # wmr-vue-plugin
 A plugin for wmr for vue SFCs
 
-![warning](https://th.bing.com/th/id/Rb1eec92f370f8d52f86bf04fc9086bcf?rik=k8h0GOdpMYE6UQ&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fdownload_515232.png&ehk=Eov%2bGcAU2ks2IP%2bhMGkdyBAstYg%2frw9Yx94ZTxHmuoI%3d&risl=&pid=ImgRaw)
+![warning](https://ubcomputerlab.files.wordpress.com/2011/09/warning_sign_bold.png?w=150)
 
 ## Important: At the moment this is a proof of concept and it only works in the build step
 
