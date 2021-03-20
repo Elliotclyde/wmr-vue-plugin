@@ -82,7 +82,7 @@ export default function () {
         const newhtml = file.source
           .toString()
           .replace(
-            /<\/head>/i,
+            /<( )*?\/( )*head( )*>/i,
             `\t<link rel="stylesheet" href="/${cssFilename}">\n</head>`
           );
         file.source = newhtml;
