@@ -5,7 +5,7 @@ A plugin for wmr for vue SFCs
 
 ## Important: At the moment this is a proof of concept and it only works in the build step
 
-This is basically just a simplified version of the Vue SFC rollup plugin and won't work in the wmr dev server. 
+This is basically just a simplified version of the Vue SFC rollup plugin and won't work in the wmr dev server. However, it does allow you to include Vue SFCs in the build step of your wmr project.
 
 ## Usage
 
