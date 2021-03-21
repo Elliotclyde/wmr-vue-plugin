@@ -10,7 +10,7 @@ This should not be used in production as it's very much untested. PRs are very w
 Here's how you can include it in your codebase:
 
 1. Install dependencies: `npm install @vue/compiler-sfc hash-sum vue@next`
-2. Copy the contents of wmr-vue-plugin into a file file at the root of your project named `vue-plugin.js`
+2. Copy the contents of wmr-vue-plugin into a file at the root of your project named `vue-plugin.js`
 3. Create a `wmr.config.js` file and add:
 
 ```
