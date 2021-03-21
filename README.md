@@ -21,7 +21,6 @@ import { buildVue, devVue } from "./vue-plugin.js";
 export default async function (config) {
   if (config.mode === "build") {
     config.plugins.push(
-      // add any Rollup plugins:
       buildVue()
     );
   }
