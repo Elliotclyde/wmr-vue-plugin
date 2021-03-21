@@ -1,29 +1,34 @@
 # wmr-vue-plugin
-A plugin for wmr for vue SFCs
+A plugin for wmr for vue SFCs.
 
-![warning](https://ubcomputerlab.files.wordpress.com/2011/09/warning_sign_bold.png?w=150)
+This does not yet support HMR. It also assumes you're hosting your dev environment from a public directory. 
 
-## Important: At the moment this is a proof of concept and it only works in the build step
-
-This is basically just a simplified version of the Vue SFC rollup plugin and won't work in the wmr dev server. However, it does allow you to include Vue SFCs in the build step of your wmr project.
+This should not be used in production as it's very much untested. PRs are very welcome. 
 
 ## Usage
 
-This isn't on npm yet but it's going to be very easy to include in your codebase:
+Here's how you can include it in your codebase:
 
-1. Install dependencies: `npm install @vue/compiler-sfc hash-sum`
+1. Install dependencies: `npm install @vue/compiler-sfc hash-sum vue@next`
 2. Copy the contents of wmr-vue-plugin into a file file at the root of your project named `vue-plugin.js`
 3. Create a `wmr.config.js` file and add:
 
 ```
 // wmr.config.js
-import vue from "./vue-plugin.js";
+
+import { buildVue, devVue } from "./vue-plugin.js";
+
 export default async function (config) {
-  config.plugins.push(
-    // add any Rollup plugins:
-    vue()
-  );
+  if (config.mode === "build") {
+    config.plugins.push(
+      // add any Rollup plugins:
+      buildVue()
+    );
+  }
+  if (config.mode === "start") {
+    config.middleware.push(devVue);
+  }
 }
 ```
 
-That's it! Now you can write single file components and they will render in the build step.
+That's it! Now you can write single file components in wmr.
